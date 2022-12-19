@@ -48,3 +48,10 @@ def save_with_pickle(source, path):
     pickle_out = open(path,"wb")
     pickle.dump(source, pickle_out)
     pickle_out.close()
+
+def read_with_pickle(path):  
+    pickle_out = open(path,"rb")
+    result = pickle.load(pickle_out) 
+    pickle_out.close()
+
+    return result
